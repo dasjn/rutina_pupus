@@ -12,7 +12,13 @@
       "Bash(npm init:*)",
       "Bash(npm install:*)",
       "Bash(npm run generate-pwa-assets:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(ls:*)",
+      "Bash(rm:*)",
+      "Bash(cp:*)",
+      "Bash(npm run build:*)",
+      "Bash(grep:*)",
+      "Bash(npm run preview:*)"
     ],
     "deny": []
   }
