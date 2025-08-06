@@ -8,7 +8,11 @@
       "Bash(git remote add:*)",
       "Bash(git push:*)",
       "Bash(gh auth:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run generate-pwa-assets:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": []
   }
