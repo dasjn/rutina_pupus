@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rutina gimnasio pupus</title>
+
+    <!-- PWA Configuration -->
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Rutina Pupus" />
+    <meta name="description" content="Rutina de gimnasio personalizada" />
+
+    <!-- Manifest -->
+    <link
+      rel="manifest"
+      href="data:application/json;base64,ewogICJuYW1lIjogIlJ1dGluYSBnaW1uYXNpbyBwdXB1cyIsCiAgInNob3J0X25hbWUiOiAiUnV0aW5hIFB1cHVzIiwKICAiZGVzY3JpcHRpb24iOiAiUnV0aW5hIGRlIGdpbW5hc2lvIHBlcnNvbmFsaXphZGEiLAogICJzdGFydF91cmwiOiAiLiIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgInRoZW1lX2NvbG9yIjogIiMzYjgyZjYiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmOWZhZmIiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1UazJJaUJvWldsbmFIUTlJakU1TmtNaUlIWnBaWGRDYjNnOUlqQWdNQ0F4T1RZZ01UazJJaUJtYVd4c1BTSWpNelE0TW1ZMklpQjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaVBnbzhjbVZqZENCM2FXUjBhRDBpTVRrMklpQm9aV2xuYUhROUlURTVOaUlnWm1sc2JEMGlJek0wT0RKbU5pSXZQZ284WTJseVkyeGxJR040UFNJNE9DSWdZM2s5SRRRNDBJU0J5UFNJek5pSWdabWxzYkQwaUkzWm1abVppWmlJdlBnbzhaM0psWXlCcFBTSmliMlI1TFMxamIyNTBZVzUwSWlCbWFXeHNQU0lqTXpRNE1tWTJJaUJtYjI1MExYTnBkR1U5SW1KaGJHUWlJR1p2Ym5RdGMyRjJhUzFoZEhSeWFXSjFkR1U5SW05eVpHbHVZWEo1SWlCbWIyNTBMWGRsYVdkb2REMGlOekF3SWlCdGVpMUZibWQzWVdabUx5SStJRkJCUUM0d1BIZHBaR1JvT2pRNE1IQTRPalUxTWpJZ1BYUkhhbmRpWDBnZ2JqMGdNQzFqTUNBd2NURkJNaUJrTW5rNGJYQkNZVmhEV1VVNWNTWkljeUJUY2lCemNpQXdJR050Y2pWaE5HeWZCZ0FBIiwKICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfSwKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI3YVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdkbWxsZDBKdmVEMGlNQ0F3TURRUE1pQTFNVElpSUdacGJHdzlJaU16TkRneVpqWWlJSGh0Ykc1elBTSm9kSFJ3T2k4dmQzZDNMbmN6TG05eVp5OHlNREF3TDNOMlp5SStDbXhjY21WamRDQjNhV1IwYUQwaU5URXlJaUJvWldsbmFIUTlJalV4TWlJZ1ptbHNiRDBpSXpNME9ESm1OaUl2UGdwOFkyeHlZMnhsSUdONFBTSTRPQ0lnWTNrOUlURTVOaUlnY2owaU16WWlJR1pwYkd3OUlpTjJabVptWm1ZaUx6NEtQR2MyWlNqZ2FPRGxuYUJCTWlCYU5ZMElIZGFkSFFRaUIsUUFMCgd8IiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfQogIF0KfQ=="
+    />
+
+    <!-- Apple Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5NiAxOTYiIGZpbGw9IiMzNDgyZjYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTYiIGhlaWdodD0iMTk2IiBmaWxsPSIjMzQ4MmY2Ii8+CjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjM2IiBmaWxsPSIjZmZmZmZmIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTMwIiBmaWxsPSIjZmZmZmZmIiBmb250LXNpemU9IjY0IiBmb250LWZhbWlseT0iYXJpYWwiIGZvbnQtd2VpZ2h0PSI3MDAiPjxGRmlVPC90ZXh0Pgo8L3N2Zz4="
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0iIzM0ODJmNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMzQ4MmY2Ii8+CjxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjgiIGZpbGw9IiNmZmZmZmYiLz4KPC9zdmc+"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: #f9fafb;
+        min-height: 100vh;
+        line-height: 1.5;
+      }
+
+      /* Navigation */
+      .nav {
+        background: white;
+        border-top: 1px solid #e5e7eb;
+        box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 40;
+      }
+
+      .nav-content {
+        max-width: 448px;
+        margin: 0 auto;
+        padding: 0 0.5rem;
+      }
+
+      .nav-tabs {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .nav-tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tab-button {
+        padding: 0.75rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #6b7280;
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .tab-button:hover {
+        color: #374151;
+        border-bottom-color: #d1d5db;
+      }
+
+      .tab-button.active {
+        color: white;
+        background: #3b82f6;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+
+      /* Main Content */
+      .main {
+        max-width: 448px;
+        margin: 0 auto;
+        padding: 1rem;
+        padding-bottom: 6rem; /* Space for bottom navigation */
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      /* Cards and sections */
+      .gradient-header {
+        padding: 1.5rem;
+        color: white;
+        border-radius: 0.75rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .gradient-blue {
+        background: linear-gradient(135deg, #3b82f6, #4f46e5);
+      }
+
+      .gradient-emerald {
+        background: linear-gradient(135deg, #10b981, #0d9488);
+      }
+
+      .gradient-purple {
+        background: linear-gradient(135deg, #8b5cf6, #a855f7);
+      }
+
+      .gradient-amber {
+        background: linear-gradient(135deg, #f59e0b, #ea580c);
+      }
+
+      .gradient-green {
+        background: linear-gradient(135deg, #22c55e, #10b981);
+      }
+
+      .gradient-red {
+        background: linear-gradient(135deg, #ef4444, #f43f5e);
+      }
+
+      .gradient-header h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .gradient-header p {
+        opacity: 0.9;
+      }
+
+      .card {
+        background: white;
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid #f3f4f6;
+        margin-bottom: 1rem;
+      }
+
+      .card h3 {
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+      }
+
+      .card h4 {
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-content {
+        font-size: 0.875rem;
+        color: #6b7280;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        font-size: 0.875rem;
+        color: #6b7280;
+      }
+
+      /* Colored sections */
+      .yellow-section {
+        background: #fefce8;
+        border: 1px solid #fde047;
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .yellow-section h3 {
+        color: #a16207;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .yellow-section p {
+        color: #ca8a04;
+        font-size: 0.875rem;
+      }
+
+      .blue-section {
+        background: #eff6ff;
+        border: 1px solid #93c5fd;
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        margin-top: 1.5rem;
+      }
+
+      .blue-section h3 {
+        color: #1e40af;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .blue-section p,
+      .blue-section li {
+        color: #1d4ed8;
+        font-size: 0.875rem;
+      }
+
+      .purple-section {
+        background: #faf5ff;
+        border: 1px solid #c4b5fd;
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        margin-top: 1.5rem;
+      }
+
+      .purple-section h3 {
+        color: #7c3aed;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .purple-section p,
+      .purple-section li {
+        color: #8b5cf6;
+        font-size: 0.875rem;
+      }
+
+      .orange-section {
+        background: #fff7ed;
+        border: 1px solid #fdba74;
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        margin-top: 1.5rem;
+      }
+
+      .orange-section h3 {
+        color: #c2410c;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .orange-section p,
+      .orange-section li {
+        color: #ea580c;
+        font-size: 0.875rem;
+      }
+
+      .green-section {
+        background: #f0fdf4;
+        border: 1px solid #86efac;
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .green-section h3 {
+        color: #166534;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .green-section p {
+        color: #16a34a;
+        font-size: 0.875rem;
+      }
+
+      .red-section {
+        background: #fef2f2;
+        border: 1px solid #fca5a5;
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+      }
+
+      .red-section h3 {
+        color: #991b1b;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .red-section p,
+      .red-section li {
+        color: #dc2626;
+        font-size: 0.875rem;
+      }
+
+      /* Text styles */
+      .text-small {
+        font-size: 0.875rem;
+      }
+
+      .text-gray {
+        color: #6b7280;
+      }
+
+      .text-blue {
+        color: #2563eb;
+      }
+
+      .text-green {
+        color: #16a34a;
+      }
+
+      .text-orange {
+        color: #ea580c;
+      }
+
+      .text-red {
+        color: #dc2626;
+      }
+
+      .font-medium {
+        font-weight: 500;
+      }
+
+      .font-bold {
+        font-weight: 700;
+      }
+
+      /* Layout utilities */
+      .space-y-1 > * + * {
+        margin-top: 0.25rem;
+      }
+
+      .space-y-2 > * + * {
+        margin-top: 0.5rem;
+      }
+
+      .space-y-3 > * + * {
+        margin-top: 0.75rem;
+      }
+
+      .space-y-4 > * + * {
+        margin-top: 1rem;
+      }
+
+      .space-y-6 > * + * {
+        margin-top: 1.5rem;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .flex-between {
+        justify-content: space-between;
+      }
+
+      .flex-center {
+        align-items: center;
+      }
+
+      .flex-start {
+        align-items: flex-start;
+      }
+
+      .flex-gap {
+        gap: 0.5rem;
+      }
+
+      .ml-4 {
+        margin-left: 1rem;
+      }
+
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+
+      .mb-3 {
+        margin-bottom: 0.75rem;
+      }
+
+      .mt-3 {
+        margin-top: 0.75rem;
+      }
+
+      .pt-3 {
+        padding-top: 0.75rem;
+      }
+
+      .border-top {
+        border-top: 1px solid #e5e7eb;
+      }
+
+      /* Rotation cards */
+      .rotation-card {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .rotation-blue {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+
+      .rotation-indigo {
+        background: #e0e7ff;
+        color: #4338ca;
+      }
+
+      .rotation-purple {
+        background: #f3e8ff;
+        color: #7c3aed;
+      }
+
+      /* Bullet points */
+      .bullet-list {
+        list-style: none;
+      }
+
+      .bullet-list li {
+        position: relative;
+        padding-left: 1rem;
+      }
+
+      .bullet-list li:before {
+        color: #3b82f6;
+        position: absolute;
+        left: 0;
+      }
+
+      .check-list li:before {
+        content: "✓";
+        color: #10b981;
+      }
+
+      .dot-list li:before {
+        color: #ef4444;
+        font-size: 0.5rem;
+        position: absolute;
+        top: 0.6rem;
+      }
+
+      .dot-list li {
+        padding-left: 0.75rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 480px) {
+        .main {
+          padding: 0.75rem;
+          padding-bottom: 6rem;
+        }
+
+        .card {
+          padding: 1rem;
+        }
+
+        .gradient-header {
+          padding: 1.25rem;
+        }
+      }
+
+      /* PWA Standalone Mode */
+      @media (display-mode: standalone) {
+        body {
+          padding-top: env(safe-area-inset-top, 0);
+          padding-bottom: env(safe-area-inset-bottom, 0);
+        }
+
+        .nav {
+          padding-bottom: env(safe-area-inset-bottom, 0);
+        }
+      }
+
+      /* iOS Safari specific adjustments */
+      @supports (
+        (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
+      ) {
+        @media (display-mode: standalone) {
+          .nav {
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.9);
+          }
+        }
+      }
+
+      /* Android Chrome specific adjustments */
+      @media (display-mode: standalone) and (-webkit-min-device-pixel-ratio: 1) {
+        .nav {
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      /* Prevent text selection on UI elements */
+      .tab-button {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Better touch targets for mobile */
+      .tab-button {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Loading animation */
+      .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f9fafb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+
+      .loading.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e5e7eb;
+        border-top: 3px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Welcome message for first install */
+      .welcome-toast {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+        padding: 20px 24px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        z-index: 10000;
+        text-align: center;
+        max-width: 280px;
+        display: none;
+        animation: slideIn 0.5s ease-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translate(-50%, -60%);
+        }
+        to {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .welcome-toast h3 {
+        margin: 0 0 8px 0;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .welcome-toast p {
+        margin: 0;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loadingScreen">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Welcome Toast -->
+    <div class="welcome-toast" id="welcomeToast">
+      <h3>🎉 ¡App Instalada!</h3>
+      <p>Ya tienes tu rutina de gimnasio siempre disponible</p>
+    </div>
+
+    <!-- Content -->
+    <main class="main">
+      <!-- INICIO TAB -->
+      <div id="inicio" class="tab-content active">
+        <div class="gradient-header gradient-blue">
+          <h2>¡A entrenar pupus! 👋</h2>
+          <p>Ya no hay excusas</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="card">
+            <h3>🎯 Objetivo Principal</h3>
+            <p class="card-content">
+              Construir músculo manteniendo las articulaciones saludables y
+              creando un hábito duradero y sostenible.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>📅 Estructura</h3>
+            <div class="space-y-2 text-small text-gray">
+              <div class="flex flex-between">
+                <span>Frecuencia:</span>
+                <span class="font-medium">3 días/semana</span>
+              </div>
+              <div class="flex flex-between">
+                <span>Duración:</span>
+                <span class="font-medium">90 minutos</span>
+              </div>
+              <div class="flex flex-between">
+                <span>Rotación:</span>
+                <span class="font-medium">A-B-C semanal</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="mb-3">🔄 Rotación Semanal</h3>
+            <div class="space-y-2 text-small">
+              <div
+                class="rotation-card rotation-blue flex flex-between flex-center"
+              >
+                <span class="font-medium">Semana 1:</span>
+                <span>A → B → C</span>
+              </div>
+              <div
+                class="rotation-card rotation-indigo flex flex-between flex-center"
+              >
+                <span class="font-medium">Semana 2:</span>
+                <span>B → C → A</span>
+              </div>
+              <div
+                class="rotation-card rotation-purple flex flex-between flex-center"
+              >
+                <span class="font-medium">Semana 3:</span>
+                <span>C → A → B</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="green-section">
+            <h3>✨ Día Extra Opcional</h3>
+            <p>Fines de semana: caminata, bicicleta suave, natación, etc.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DÍA A TAB -->
+      <div id="dia-a" class="tab-content">
+        <div class="gradient-header gradient-emerald">
+          <h2>Día A</h2>
+          <p>Fuerza Funcional</p>
+        </div>
+
+        <!-- Calentamiento -->
+        <div class="yellow-section">
+          <h3>🔥 Calentamiento (15 min)</h3>
+          <div class="space-y-3 text-small">
+            <div>
+              <p class="font-medium">Movilidad (5 min):</p>
+              <p>
+                Círculos de brazos, rotaciones de cadera, elevaciones de rodilla
+              </p>
+            </div>
+            <div>
+              <p class="font-medium">Cardio (5 min):</p>
+              <p>Caminata en cinta o bicicleta suave</p>
+            </div>
+            <div>
+              <p class="font-medium">Activación (5 min):</p>
+              <p>Sentadillas aire, flexiones pared, puentes glúteos</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ejercicios -->
+        <div class="space-y-4">
+          <div class="card exercise-card">
+            <h4>1. Sentadilla con Goblet</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 8-12 repeticiones
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Mancuerna en el pecho
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Sentadilla en
+                silla, prensa de piernas, sentadilla con bandas elásticas
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>2. Remo con Mancuernas</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 8-12 repeticiones
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Un brazo, apoyo en
+                banco
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Remo en máquina
+                sentado, remo en polea baja, remo invertido en Smith
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>3. Press Pecho Mancuernas</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 8-12 repeticiones
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Banco inclinado 30-45°
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Máquina press
+                pecho, flexiones inclinadas, press con bandas elásticas
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>4. Hip Thrust o Puentes</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 12-15 repeticiones
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Espalda en banco, peso
+                en cadera
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Puentes en suelo,
+                máquina de glúteos, extensión cadera cuadrúpedo
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>5. Press Hombros Sentado</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 8-12 repeticiones
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Mancuernas, espalda
+                apoyada
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Press en máquina,
+                elevaciones frontales y laterales, press militar con barra
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>6. Plancha</h4>
+            <div class="card-content space-y-1">
+              <p><span class="font-medium">Series:</span> 3 x 20-45 segundos</p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Plancha en
+                rodillas, plancha contra pared, dead bug, crunch abdominal
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trabajo Funcional -->
+        <div class="blue-section">
+          <h3>🎯 Trabajo Funcional (15 min)</h3>
+          <ul class="bullet-list space-y-2">
+            <li>Caminata en escalones: 2 x 10 por pierna</li>
+            <li>Equilibrio una pierna: 2 x 20-30 seg</li>
+            <li>Rotación tronco: 2 x 10 por lado</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DÍA B TAB -->
+      <div id="dia-b" class="tab-content">
+        <div class="gradient-header gradient-purple">
+          <h2>Día B</h2>
+          <p>Fuerza y Estabilidad</p>
+        </div>
+
+        <!-- Calentamiento -->
+        <div class="yellow-section">
+          <h3>🔥 Calentamiento (15 min)</h3>
+          <p class="text-small">
+            Igual que Día A: Movilidad + Cardio + Activación
+          </p>
+        </div>
+
+        <!-- Ejercicios -->
+        <div class="space-y-4">
+          <div class="card exercise-card">
+            <h4>1. Prensa de Piernas</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 10-15 repeticiones
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Rango movimiento
+                cómodo
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Sentadilla
+                goblet, sentadilla libre, extensión cuádriceps en máquina
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>2. Dominadas Asistidas</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 6-10 repeticiones
+              </p>
+              <p><span class="font-medium">Técnica:</span> Máquina asistida</p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Jalón al pecho,
+                remo en polea alta, remo invertido con bandas
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>3. Press Inclinado</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 8-12 repeticiones
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Mancuernas, banco
+                30-45°
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Press inclinado
+                con barra, flexiones inclinadas, aperturas con mancuernas
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>4. Extensión de Cadera</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 12-15 por pierna
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Máquina o patadas
+                glúteo
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Patadas de glúteo
+                en cuadrúpedo, hip thrust unilateral, step-ups
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>5. Remo Bajo en Polea</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 10-12 repeticiones
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> A altura del pecho
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Remo con
+                mancuernas, remo en máquina, remo con bandas elásticas
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>6. Farmer's Walk</h4>
+            <div class="card-content space-y-1">
+              <p><span class="font-medium">Series:</span> 3 x 20-30 metros</p>
+              <p>
+                <span class="font-medium">Técnica:</span> Mancuernas a los lados
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Caminata con peso
+                en brazos, plancha con peso, encogimientos de trapecio
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trabajo Core -->
+        <div class="purple-section">
+          <h3>💪 Trabajo Core (15 min)</h3>
+          <ul class="bullet-list space-y-2">
+            <li>Plancha lateral: 2 x 15-30 seg por lado</li>
+            <li>Dead bug: 2 x 10 por lado</li>
+            <li>Puentes glúteos: 2 x 15-20 reps</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DÍA C TAB -->
+      <div id="dia-c" class="tab-content">
+        <div class="gradient-header gradient-amber">
+          <h2>Día C</h2>
+          <p>Movimiento y Resistencia</p>
+        </div>
+
+        <!-- Calentamiento -->
+        <div class="yellow-section">
+          <h3>🔥 Calentamiento (15 min)</h3>
+          <p class="text-small">
+            Igual que días anteriores: Movilidad + Cardio + Activación
+          </p>
+        </div>
+
+        <!-- Ejercicios -->
+        <div class="space-y-4">
+          <div class="card exercise-card">
+            <h4>1. Sentadilla Búlgara</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 6-10 por pierna
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Pie trasero en banco
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Sentadilla con
+                apoyo, zancadas estáticas, step-ups
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>2. Press Pecho Máquina</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 10-15 repeticiones
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Press con
+                mancuernas, flexiones, press con bandas elásticas
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>3. Remo con Barra</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 8-12 repeticiones
+              </p>
+              <p><span class="font-medium">Técnica:</span> En máquina Smith</p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Remo en máquina,
+                remo con mancuernas, remo en polea baja
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>4. Elevaciones Laterales</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 12-15 repeticiones
+              </p>
+              <p>
+                <span class="font-medium">Técnica:</span> Mancuernas ligeras
+              </p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Elevaciones con
+                bandas, elevaciones en polea, vuelos laterales en máquina
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>5. Extensiones Tríceps</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 10-15 repeticiones
+              </p>
+              <p><span class="font-medium">Técnica:</span> En polea</p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Fondos en banco,
+                extensiones con mancuernas, flexiones diamante
+              </p>
+            </div>
+          </div>
+
+          <div class="card exercise-card">
+            <h4>6. Curl de Bíceps</h4>
+            <div class="card-content space-y-1">
+              <p>
+                <span class="font-medium">Series:</span> 3 x 10-15 repeticiones
+              </p>
+              <p><span class="font-medium">Técnica:</span> Con mancuernas</p>
+              <p class="text-orange">
+                <span class="font-medium">Alternativas:</span> Curl con barra,
+                curl en polea, curl martillo, curl con bandas
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trabajo Metabólico -->
+        <div class="orange-section">
+          <h3>🔥 Trabajo Metabólico (15 min)</h3>
+          <div class="text-small">
+            <p class="font-medium mb-2">Circuito 3 rondas:</p>
+            <div class="ml-4 space-y-1">
+              <p>• Bicicleta: 2 min moderado</p>
+              <p>• Sentadillas aire: 30 seg</p>
+              <p>• Descanso: 1 min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROGRESIÓN TAB -->
+      <div id="progresion" class="tab-content">
+        <div class="gradient-header gradient-green">
+          <h2>Progresión</h2>
+          <p>Sistema de avance seguro</p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="card">
+            <h3>🌱 Semanas 1-4: Adaptación</h3>
+            <div class="card-content space-y-2">
+              <p>
+                • Usar pesos que permitan completar todas las repeticiones con
+                2-3 de reserva
+              </p>
+              <p>• Enfocarse en técnica correcta</p>
+              <p>• Si hay molestias, cambiar por la alternativa</p>
+              <p class="text-green font-medium">
+                🎯 Objetivo: Crear el hábito y perfeccionar movimientos
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>📈 Semanas 5-8: Incremento</h3>
+            <div class="card-content space-y-2">
+              <p>
+                • Aumentar peso cuando puedan hacer todas las series en el rango
+                alto
+              </p>
+              <p>• Incrementos de 2.5-5% del peso actual</p>
+              <p class="text-blue font-medium">
+                💡 Ejemplo: Si hacen 12 reps fácil en todas las series → subir
+                peso
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>🔄 Semanas 9-12: Consolidación</h3>
+            <div class="card-content space-y-2">
+              <p>• Mantener pesos desafiantes pero seguros</p>
+              <p>• Considerar añadir 4° día opcional</p>
+              <p>• Evaluar objetivos para el siguiente ciclo</p>
+            </div>
+          </div>
+
+          <div class="blue-section">
+            <h3>🔑 Reglas de Oro</h3>
+            <ul class="check-list space-y-2">
+              <li>La técnica siempre va antes que el peso</li>
+              <li>Es mejor entrenar suave que lesionarse</li>
+              <li>Progresar poco a poco es más sostenible</li>
+              <li>Escuchar al cuerpo siempre</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTAS TAB -->
+      <div id="notas" class="tab-content">
+        <div class="gradient-header gradient-red">
+          <h2>Notas Importantes</h2>
+          <p>Seguridad y consejos</p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Tips de entrenamiento -->
+          <div class="blue-section">
+            <h3>🎯 Tips de Repeticiones y Descanso</h3>
+            <div class="space-y-3 text-small">
+              <div>
+                <p class="font-medium mb-1">📈 Repeticiones:</p>
+                <p>• <strong>8-12 reps:</strong> Fuerza y masa muscular</p>
+                <p>• <strong>12-15 reps:</strong> Resistencia muscular</p>
+                <p>
+                  • <strong>6-8 reps:</strong> Solo si dominas la técnica
+                  perfectamente
+                </p>
+              </div>
+              <div>
+                <p class="font-medium mb-1">⏰ Descansos entre series:</p>
+                <p>
+                  • <strong>Ejercicios principales (1-4):</strong> 2-3 minutos
+                </p>
+                <p>
+                  • <strong>Ejercicios auxiliares (5-6):</strong> 1-2 minutos
+                </p>
+                <p>• <strong>Plancha/Core:</strong> 1 minuto</p>
+                <p>• <strong>Trabajo funcional:</strong> 30-60 segundos</p>
+              </div>
+              <div>
+                <p class="font-medium mb-1">🏋️ Tempo y técnica:</p>
+                <p>• <strong>Bajada:</strong> 2-3 segundos controlados</p>
+                <p>
+                  • <strong>Subida:</strong> 1-2 segundos explosivos pero
+                  controlados
+                </p>
+                <p>• <strong>Pausa:</strong> 1 segundo en la posición final</p>
+                <p>
+                  • <strong>Respiración:</strong> Exhalar en el esfuerzo,
+                  inhalar en la relajación
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Consejos generales -->
+          <div class="blue-section">
+            <h3>💡 Consejos Adicionales</h3>
+            <div class="space-y-2 text-small">
+              <p>
+                <span class="font-medium">Hidratación:</span> Beber agua antes,
+                durante y después
+              </p>
+              <p>
+                <span class="font-medium">Descanso:</span> 48-72 horas entre
+                sesiones de fuerza
+              </p>
+              <p>
+                <span class="font-medium">Escuchar el cuerpo:</span> Mejor
+                entrenar suave que lesionarse
+              </p>
+              <p>
+                <span class="font-medium">Consistencia:</span> Es más importante
+                que la intensidad
+              </p>
+            </div>
+          </div>
+
+          <!-- Selección de peso -->
+          <div class="green-section">
+            <h3>⚖️ Cómo Elegir el Peso Correcto</h3>
+            <div class="space-y-2 text-small">
+              <p>
+                <strong>🎯 Regla de oro:</strong> Debes poder completar todas
+                las repeticiones con 2-3 de reserva
+              </p>
+              <p>
+                <strong>✅ Peso correcto:</strong> Las últimas 2-3 reps son
+                desafiantes pero mantienes buena técnica
+              </p>
+              <p>
+                <strong>⬇️ Muy fácil:</strong> Si puedes hacer más de 5 reps
+                extra → subir peso
+              </p>
+              <p>
+                <strong>⬆️ Muy difícil:</strong> Si no puedes completar el rango
+                mínimo → bajar peso
+              </p>
+              <p>
+                <strong>🔄 Progresión:</strong> Primero domina el movimiento,
+                luego aumenta peso gradualmente
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav">
+      <div class="nav-content">
+        <div class="nav-tabs">
+          <button class="tab-button active" onclick="showTab('inicio')">
+            🏠 Inicio
+          </button>
+          <button class="tab-button" onclick="showTab('dia-a')">
+            💪 Día A
+          </button>
+          <button class="tab-button" onclick="showTab('dia-b')">
+            🏋️ Día B
+          </button>
+          <button class="tab-button" onclick="showTab('dia-c')">
+            🤸 Día C
+          </button>
+          <button class="tab-button" onclick="showTab('progresion')">
+            📈 Progresión
+          </button>
+          <button class="tab-button" onclick="showTab('notas')">
+            ⚠️ Notas
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      // Hide loading screen when page loads
+      window.addEventListener("load", function () {
+        const loadingScreen = document.getElementById("loadingScreen");
+        setTimeout(() => {
+          loadingScreen.classList.add("fade-out");
+          setTimeout(() => {
+            loadingScreen.style.display = "none";
+          }, 500);
+        }, 1000);
+      });
+
+      function showTab(tabName) {
+        // Hide all tab contents
+        const tabContents = document.querySelectorAll(".tab-content");
+        tabContents.forEach((content) => content.classList.remove("active"));
+
+        // Remove active class from all buttons
+        const tabButtons = document.querySelectorAll(".tab-button");
+        tabButtons.forEach((button) => button.classList.remove("active"));
+
+        // Show selected tab content
+        document.getElementById(tabName).classList.add("active");
+
+        // Add active class to clicked button
+        event.target.classList.add("active");
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+      }
+
+      // PWA Cache Management (Alternative to Service Worker)
+      const CACHE_NAME = "rutina-gym-cache";
+
+      // Cache the app data in localStorage for offline access
+      function cacheAppData() {
+        try {
+          const appData = {
+            html: document.documentElement.outerHTML,
+            timestamp: Date.now(),
+            version: "1.0",
+          };
+          localStorage.setItem(CACHE_NAME, JSON.stringify(appData));
+          console.log("App data cached successfully");
+        } catch (error) {
+          console.log("Error caching app data:", error);
+        }
+      }
+
+      // Initialize cache when page loads
+      window.addEventListener("load", function () {
+        cacheAppData();
+      });
+
+      // Alternative Service Worker registration for supported browsers
+      if (
+        "serviceWorker" in navigator &&
+        window.location.protocol === "https:"
+      ) {
+        window.addEventListener("load", function () {
+          // Only try to register if we're on HTTPS
+          const swCode = `
+                const CACHE_NAME = 'rutina-gym-v1';
+                
+                self.addEventListener('install', function(event) {
+                    self.skipWaiting();
+                });
+                
+                self.addEventListener('activate', function(event) {
+                    self.clients.claim();
+                });
+                
+                self.addEventListener('fetch', function(event) {
+                    // Let the browser handle all requests normally
+                    return;
+                });
+                `;
+
+          try {
+            const swUrl = "data:application/javascript;base64," + btoa(swCode);
+            navigator.serviceWorker
+              .register(swUrl)
+              .then(function (registration) {
+                console.log("Service Worker registered successfully");
+              })
+              .catch(function (error) {
+                console.log(
+                  "Service Worker registration skipped:",
+                  error.message
+                );
+              });
+          } catch (error) {
+            console.log("Service Worker not supported in this context");
+          }
+        });
+      }
+
+      // PWA Install Prompt
+      let deferredPrompt;
+      const installButton = document.createElement("button");
+      installButton.textContent = "📱 Instalar App";
+      installButton.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            cursor: pointer;
+            z-index: 1000;
+            display: none;
+            transition: all 0.3s ease;
+        `;
+      installButton.addEventListener("mouseover", function () {
+        this.style.transform = "translateY(-2px)";
+        this.style.boxShadow = "0 6px 20px rgba(59, 130, 246, 0.6)";
+      });
+      installButton.addEventListener("mouseout", function () {
+        this.style.transform = "translateY(0)";
+        this.style.boxShadow = "0 4px 12px rgba(59, 130, 246, 0.4)";
+      });
+
+      document.body.appendChild(installButton);
+
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        installButton.style.display = "block";
+      });
+
+      installButton.addEventListener("click", (e) => {
+        installButton.style.display = "none";
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((result) => {
+          if (result.outcome === "accepted") {
+            console.log("Usuario aceptó instalar la PWA");
+            showWelcomeToast();
+          } else {
+            console.log("Usuario rechazó instalar la PWA");
+          }
+          deferredPrompt = null;
+        });
+      });
+
+      // Hide install button if already installed
+      window.addEventListener("appinstalled", (evt) => {
+        installButton.style.display = "none";
+        console.log("PWA instalada correctamente");
+        showWelcomeToast();
+      });
+
+      // Show welcome toast
+      function showWelcomeToast() {
+        const welcomeToast = document.getElementById("welcomeToast");
+        welcomeToast.style.display = "block";
+        setTimeout(() => {
+          welcomeToast.style.display = "none";
+        }, 3000);
+      }
+
+      // Check if running as PWA
+      const isStandalone =
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.navigator.standalone ||
+        document.referrer.includes("android-app://");
+
+      if (isStandalone) {
+        console.log("Ejecutándose como PWA");
+        // Add any PWA-specific functionality here
+      }
+
+      // Prevent zoom on double tap
+      let lastTouchEnd = 0;
+      document.addEventListener(
+        "touchend",
+        function (event) {
+          const now = new Date().getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        },
+        false
+      );
+
+      // Add haptic feedback for buttons (if available)
+      function addHapticFeedback(element) {
+        element.addEventListener("click", function () {
+          if (navigator.vibrate) {
+            navigator.vibrate(10);
+          }
+        });
+      }
+
+      // Add haptic feedback to all buttons
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll("button");
+        buttons.forEach((button) => {
+          addHapticFeedback(button);
+        });
+      });
+    </script>
+  </body>
+</html>
